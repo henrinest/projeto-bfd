@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-/// Programa básico para print da palavra "Hello World!"
+/// Programa inicial, do projeto BFD.
 
 app.get('/', (req, res) => {
     console.log("Requisição realizada");
