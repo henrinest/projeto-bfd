@@ -1,0 +1,3 @@
+# Todos os arquivos e diretórios listados serão ignorados pelo Git.
+
+node_modules/
