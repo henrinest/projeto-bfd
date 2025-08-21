@@ -13,12 +13,16 @@ function pergunta(questao) {
 )}
 
 async function funcIdade() {
-    let idade = await pergunta("Qual é sua idade? ")
 
-    do {
-        console.log (`Idade: ${idade}`)
-        idade++
-    } while (idade <= 25);
+    let pessoa = {
+        nome : "Ana",
+        idade: 25,
+        cidade: "São Paulo"
+    };
+
+    for (chave in pessoa) {
+        console.log(`${chave}: ${pessoa [chave]}`);
+    }
 }
 
 funcIdade()
