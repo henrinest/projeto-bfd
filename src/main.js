@@ -15,10 +15,10 @@ function pergunta(questao) {
 async function funcIdade() {
     let idade = await pergunta("Qual é sua idade? ")
 
-    while (idade <= 25){
-        console.log(`Num determinado ano voce fez ${idade} anos.`)
-        idade++;
-    }
+    do {
+        console.log (`Idade: ${idade}`)
+        idade++
+    } while (idade <= 25);
 }
 
 funcIdade()
