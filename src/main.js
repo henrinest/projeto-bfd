@@ -12,11 +12,12 @@ function pergunta(questao) {
     }
 )}
 
-async function perguntarnome() {
-    primeiroNome = await pergunta("Qual é seu primeiro nome? ")
-    ultimoNome = await pergunta("Qual é o seu último nome? ")
+async function funcIdade() {
+    const idade = await pergunta("Qual é sua idade? ")
 
-    console.log(`Olá, ${primeiroNome} ${ultimoNome}`)
+    for (i = 1; i <= idade; i++){
+        console.log(`Num determinado ano voce fez ${i} anos.`)
+    }
 }
 
-perguntarnome()
+funcIdade()
