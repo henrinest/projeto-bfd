@@ -19,9 +19,9 @@ async function medalhaDeAcordoComPosicao() {
     const num = parseInt(posCorrida) - 1
 
     if (num >= 0 && num <= 2){
-    console.log (`Sua medalha reccebida foi: ${medalhas[num]}`)
+    console.log (`Sua medalha recebida foi: ${medalhas[num]}`)
     } else {
-    console.log (`Sua medalha reccebida foi: ${medalhas[3]}`)
+    console.log (`Sua medalha recebida foi: ${medalhas[3]}`)
     }
     rl.close()
 }
