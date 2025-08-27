@@ -1,11 +1,7 @@
-const array = [9,18,27,36,45,54,63,72];
-
-array.push(81);
-
-array.push(90);
+const array = [9,18,27,36,45];
 
 console.log("array:", array);
 
-const arrayReverted = array.reverse();
-
-console.log("arrayReverted:", arrayReverted);
+for (let i = 0; i < array.length; i++) {
+    console.log(i, array[i]);
+}
