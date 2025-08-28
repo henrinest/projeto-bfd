@@ -1,29 +1,26 @@
-const readline = require("readline")
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-})
-
-function pergunta(questao) {
-    return new Promise ((resolve) => {
-    rl.question(questao, (resposta) => {
-    resolve(resposta)
-    })
+class ContaBancaria {
+    constructor(titular, saldo){
+        this.titular = titular;
+        this.saldo = saldo;
     }
-)}
 
-async function medalhaDeAcordoComPosicao() {
-    let medalhas = ["Ouro", "Prata", "Bronze", "NADA"]
-
-    const posCorrida = await pergunta ("Digite a sua posição na corrida: ")
-    const num = parseInt(posCorrida) - 1
-
-    if (num >= 0 && num <= 2){
-    console.log (`Sua medalha recebida foi: ${medalhas[num]}`)
-    } else {
-    console.log (`Sua medalha recebida foi: ${medalhas[3]}`)
+    depositarValor() {
+        this.saldo += 100;
+        console.log(`Seu saldo atual é de: R$ ${this.saldo}`);
     }
-    rl.close()
+    
+    sacarValor() {
+        let sacarSaldo = 200
+        if (this.saldo <= sacarSaldo){
+            console.log (`Saldo indisponível para saque! Seu Saldo atual é de: R$ ${this.saldo}`)
+        } else {
+            this.saldo -= sacarSaldo
+        console.log(`Seu saldo atual é de: R$ ${this.saldo}`);
+        }
+    }
 }
 
-medalhaDeAcordoComPosicao()
+let conta1 = new ContaBancaria("João", 1000)
+
+conta1.depositarValor()
+conta1.sacarValor()
