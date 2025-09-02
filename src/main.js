@@ -1,26 +1,24 @@
-class ContaBancaria {
-    constructor(titular, saldo){
-        this.titular = titular;
-        this.saldo = saldo;
-    }
-
-    depositarValor() {
-        this.saldo += 100;
-        console.log(`Seu saldo atual é de: R$ ${this.saldo}`);
-    }
-    
-    sacarValor() {
-        let sacarSaldo = 200
-        if (this.saldo <= sacarSaldo){
-            console.log (`Saldo indisponível para saque! Seu Saldo atual é de: R$ ${this.saldo}`)
-        } else {
-            this.saldo -= sacarSaldo
-        console.log(`Seu saldo atual é de: R$ ${this.saldo}`);
-        }
+class livros{
+    constructor(titulo, autor) {
+        this.titulo = titulo
+        this.autor = autor
+        this.emprestado = false
     }
 }
 
-let conta1 = new ContaBancaria("João", 1000)
+class usuario {
+    constructor(nome) {
+        this.nome = nome
+    }
+    pegarLivro(livros) {
 
-conta1.depositarValor()
-conta1.sacarValor()
+        console.log (`Usuário ${this.nome} pegou o livro "${livros.titulo}" emprestado. `)
+        livro1.emprestado = true
+    }
+}
+
+let usuario1 = new usuario("João Henrique")
+let livro1 = new livros ("Bacurau", "Juliano Barrabé")
+let livro2 = new livros ("Drácula", "Bram Stoker")
+
+usuario1.pegarLivro(livro1)
