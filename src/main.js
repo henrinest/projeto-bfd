@@ -9,11 +9,16 @@ class livros{
 class usuario {
     constructor(nome) {
         this.nome = nome
+        this.livrosObtidos = []
     }
     pegarLivro(livros) {
-
         console.log (`Usuário ${this.nome} pegou o livro "${livros.titulo}" emprestado. `)
-        livro1.emprestado = true
+        livro1.emprestado = true;
+        this.inserirLivro(livros);
+        console.log(this.livrosObtidos);
+    }
+    inserirLivro(livro) {
+        this.livrosObtidos.push(livro.titulo)
     }
 }
 
